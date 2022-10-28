@@ -1,14 +1,14 @@
 export declare type ContentType = 'application/json' | 'multipart/form-data' | 'application/x-www-form-urlencoded' | 'text/html' | 'text/plain' | 'application/xml';
 export interface Options {
-    headers?: Record<string, string>[];
+    headers?: [string, string][];
     content_type?: ContentType;
     basic_auth?: [string, string];
     bearer_auth?: string;
-    query?: Record<string, string>[];
+    query?: [string, string][];
     timeout?: number;
     body?: string;
     json?: any;
-    form?: Record<string, string>[];
+    form?: [string, string][];
 }
 export declare type Method = 'Get' | 'Post' | 'Put' | 'Patch' | 'Delete' | 'Head';
 export interface Response {
