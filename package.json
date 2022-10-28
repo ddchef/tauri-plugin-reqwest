@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-reqwest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "ddchef",
   "description": "定制化tauri-plugin-reqwest",
   "repository": {
