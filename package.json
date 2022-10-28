@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "author": "ddchef",
   "description": "定制化tauri-plugin-reqwest",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ddchef/tauri-plugin-reqwest"
+  },
+  "homepage": "https://github.com/ddchef/tauri-plugin-reqwest#tauri-plugin-reqwest",
+  "bugs": "https://github.com/ddchef/tauri-plugin-reqwest/issues",
   "browser": "webview-dist/index.js",
   "main": "webview-dist/index.js",
   "types": "webview-dist/index.d.ts",
@@ -21,5 +27,6 @@
   "dependencies": {
     "@tauri-apps/api": "^1.0.0",
     "tslib": "^2.1.0"
-  }
+  },
+  "license": "MIT"
 }
