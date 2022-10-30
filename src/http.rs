@@ -113,7 +113,7 @@ pub struct RequestOptions {
     query: Option<Vec<(String, String)>>, // any
     timeout: Option<Duration>,
     body: Option<String>,                // ContentType::other
-    json: Option<Value>,                 // ContentType::JSON
+    json: Option<String>,                // ContentType::JSON
     form: Option<Vec<(String, String)>>, // ContentType::MULTIPART/ContentType::FORM
 }
 pub struct HttpRequest {
@@ -159,7 +159,9 @@ impl HttpRequest {
                 None => self.value,
             },
             Some(ContentType::JSON) => match options.json {
-                Some(json) => self.value.json(&json),
+                Some(json) => self
+                    .value
+                    .json::<Value>(&serde_json::from_str(&json).unwrap()),
                 None => self.value,
             },
             Some(ContentType::MULTIPART) => match options.form {
